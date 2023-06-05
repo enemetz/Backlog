@@ -11,6 +11,10 @@
 		EB00F8262A2D494500A0EEE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB00F8252A2D494500A0EEE2 /* ContentView.swift */; };
 		EB00F8282A2D494600A0EEE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB00F8272A2D494600A0EEE2 /* Assets.xcassets */; };
 		EB00F82B2A2D494600A0EEE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB00F82A2A2D494600A0EEE2 /* Preview Assets.xcassets */; };
+		EB00F8342A2D49C400A0EEE2 /* ActiveItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB00F8332A2D49C400A0EEE2 /* ActiveItemsView.swift */; };
+		EB00F8362A2D49CF00A0EEE2 /* BacklogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB00F8352A2D49CF00A0EEE2 /* BacklogView.swift */; };
+		EB00F8382A2D4C1E00A0EEE2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB00F8372A2D4C1E00A0EEE2 /* Task.swift */; };
+		EB00F83A2A2D6CCB00A0EEE2 /* NewTaskSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB00F8392A2D6CCB00A0EEE2 /* NewTaskSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		EB00F8252A2D494500A0EEE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EB00F8272A2D494600A0EEE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB00F82A2A2D494600A0EEE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EB00F8332A2D49C400A0EEE2 /* ActiveItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveItemsView.swift; sourceTree = "<group>"; };
+		EB00F8352A2D49CF00A0EEE2 /* BacklogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BacklogView.swift; sourceTree = "<group>"; };
+		EB00F8372A2D4C1E00A0EEE2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		EB00F8392A2D6CCB00A0EEE2 /* NewTaskSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				EB00F8232A2D494500A0EEE2 /* BacklogApp.swift */,
 				EB00F8252A2D494500A0EEE2 /* ContentView.swift */,
+				EB00F8332A2D49C400A0EEE2 /* ActiveItemsView.swift */,
+				EB00F8352A2D49CF00A0EEE2 /* BacklogView.swift */,
+				EB00F8392A2D6CCB00A0EEE2 /* NewTaskSheet.swift */,
+				EB00F8372A2D4C1E00A0EEE2 /* Task.swift */,
 				EB00F8272A2D494600A0EEE2 /* Assets.xcassets */,
 				EB00F8292A2D494600A0EEE2 /* Preview Content */,
 			);
@@ -138,7 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB00F8262A2D494500A0EEE2 /* ContentView.swift in Sources */,
+				EB00F8342A2D49C400A0EEE2 /* ActiveItemsView.swift in Sources */,
+				EB00F8382A2D4C1E00A0EEE2 /* Task.swift in Sources */,
 				EB00F8242A2D494500A0EEE2 /* BacklogApp.swift in Sources */,
+				EB00F8362A2D49CF00A0EEE2 /* BacklogView.swift in Sources */,
+				EB00F83A2A2D6CCB00A0EEE2 /* NewTaskSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
