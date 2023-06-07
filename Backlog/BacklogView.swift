@@ -23,7 +23,7 @@ struct BacklogView: View {
     var body: some View {
         NavigationView {
             List(tasks, selection: $muliSelect) {
-                Label($0.title, systemImage: $0.priority.rawValue)
+                BacklogItemView(title: $0.title, image: $0.priority)
             }.navigationTitle("Backlog")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
