@@ -21,9 +21,14 @@ struct BacklogView: View {
     @State private var titleString = ""
     
     var body: some View {
-        NavigationView {
-            List(tasks, selection: $muliSelect) {
-                Label($0.title, systemImage: $0.priority.rawValue)
+        NavigationStack {
+            List(tasks, selection: $muliSelect) { item in
+                NavigationLink {
+                    BacklogDetailView(item: item)
+                } label: {
+                    BacklogItemView(title: item.title, image: item.priority)
+                }
+                
             }.navigationTitle("Backlog")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

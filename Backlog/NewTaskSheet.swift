@@ -13,9 +13,14 @@ struct NewTaskSheet: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
-                TextField("Task title", text: $title)
+                TextField("Task title", text: $title).padding(.all).multilineTextAlignment(.center).textFieldStyle(.roundedBorder)
                 
                 Text("Pick Priority")
+                
+                
+                Button("Add task") {
+                    print("Submitted")
+                }.buttonStyle(.bordered)
                 
 //                Picker("Flavor", selection: $priority) {
 //                    ForEach(PrioritySymbol.allCases) {value in

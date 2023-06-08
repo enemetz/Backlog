@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ActiveItemsView: View {
     var body: some View {
-        Text("Active items...")
+        NavigationView {
+            Text("Active items...")
+                .navigationTitle("Active Items")
+        }
     }
 }
 
