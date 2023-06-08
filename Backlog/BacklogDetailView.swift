@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct BacklogDetailView: View {
+    let item: Task
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text(item.title)
+                if(item.priority == .high) {
+                    Text("high")
+                } else if(item.priority == .medium) {
+                    Text("medium")
+                } else {
+                    Text("low")
+                }
+            }
+        }
     }
 }
 
-struct BacklogDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        BacklogDetailView()
-    }
-}
+//struct BacklogDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BacklogDetailView()
+//    }
+//}
