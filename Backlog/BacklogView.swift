@@ -19,7 +19,6 @@ struct BacklogView: View {
     @State private var muliSelect = Set<UUID>()
     @State private var isPresented = false
     @State private var titleString = ""
-    
     var body: some View {
         NavigationStack {
             List(tasks, selection: $muliSelect) { item in
@@ -57,8 +56,8 @@ func removeItem(at offsets: IndexSet) {
     tasks.remove(atOffsets: offsets)
 }
 
-struct BacklogView_Previews: PreviewProvider {
-    static var previews: some View {
-        BacklogView()
-    }
-}
+//struct BacklogView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BacklogView()
+//    }
+//}

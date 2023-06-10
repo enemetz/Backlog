@@ -15,6 +15,7 @@
 		EB00F8362A2D49CF00A0EEE2 /* BacklogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB00F8352A2D49CF00A0EEE2 /* BacklogView.swift */; };
 		EB00F8382A2D4C1E00A0EEE2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB00F8372A2D4C1E00A0EEE2 /* Task.swift */; };
 		EB00F83A2A2D6CCB00A0EEE2 /* NewTaskSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB00F8392A2D6CCB00A0EEE2 /* NewTaskSheet.swift */; };
+		EBC7AF482A33E9A4005DC8F7 /* PriorityTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7AF472A33E9A4005DC8F7 /* PriorityTagView.swift */; };
 		EBE41ED82A3011A9004A2DE3 /* BacklogItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE41ED72A3011A9004A2DE3 /* BacklogItemView.swift */; };
 		EBE41EDA2A301242004A2DE3 /* BacklogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE41ED92A301242004A2DE3 /* BacklogDetailView.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		EB00F8352A2D49CF00A0EEE2 /* BacklogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BacklogView.swift; sourceTree = "<group>"; };
 		EB00F8372A2D4C1E00A0EEE2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		EB00F8392A2D6CCB00A0EEE2 /* NewTaskSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskSheet.swift; sourceTree = "<group>"; };
+		EBC7AF472A33E9A4005DC8F7 /* PriorityTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityTagView.swift; sourceTree = "<group>"; };
 		EBE41ED72A3011A9004A2DE3 /* BacklogItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BacklogItemView.swift; sourceTree = "<group>"; };
 		EBE41ED92A301242004A2DE3 /* BacklogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BacklogDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 				EB00F8352A2D49CF00A0EEE2 /* BacklogView.swift */,
 				EBE41ED72A3011A9004A2DE3 /* BacklogItemView.swift */,
 				EBE41ED92A301242004A2DE3 /* BacklogDetailView.swift */,
+				EBC7AF472A33E9A4005DC8F7 /* PriorityTagView.swift */,
 				EB00F8392A2D6CCB00A0EEE2 /* NewTaskSheet.swift */,
 				EB00F8372A2D4C1E00A0EEE2 /* Task.swift */,
 				EB00F8272A2D494600A0EEE2 /* Assets.xcassets */,
@@ -163,6 +166,7 @@
 				EB00F8362A2D49CF00A0EEE2 /* BacklogView.swift in Sources */,
 				EBE41ED82A3011A9004A2DE3 /* BacklogItemView.swift in Sources */,
 				EB00F83A2A2D6CCB00A0EEE2 /* NewTaskSheet.swift in Sources */,
+				EBC7AF482A33E9A4005DC8F7 /* PriorityTagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
