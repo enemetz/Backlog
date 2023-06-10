@@ -21,11 +21,11 @@ struct BacklogView: View {
     @State private var titleString = ""
     var body: some View {
         NavigationStack {
-            List(tasks, selection: $muliSelect) { item in
+            List($items, selection: $muliSelect) { task in
                 NavigationLink {
-                    BacklogDetailView(item: item)
+                    BacklogDetailView(item: task)
                 } label: {
-                    BacklogItemView(title: item.title, image: item.priority)
+                    BacklogItemView(title: task.title, image: task.priority)
                 }
                 
             }.navigationTitle("Backlog")
@@ -38,7 +38,6 @@ struct BacklogView: View {
                     Button("Add") {
                         //TODO: Add new callsheet view to enter the task title and priority
                         isPresented.toggle()
-                        print("Shit")
                     }
                 }
             }.sheet(isPresented: $isPresented) {

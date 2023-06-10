@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct BacklogItemView: View {
-    var title: String
-    var image: PrioritySymbol
+    @Binding var title: String
+    @Binding var image: PrioritySymbol
     var body: some View {
 //        Label(title, systemImage: image)
         HStack {
