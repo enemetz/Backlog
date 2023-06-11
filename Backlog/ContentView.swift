@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var tasks = MockData().getMockData()
     var body: some View {
-        TabView{
-            ActiveItemsView().tabItem {
+        TabView {
+            ActiveItemsView(items: $tasks).tabItem {
                 Label("Active Tasks", systemImage: "list.clipboard.fill")
             }
                 
-            BacklogView().tabItem {
+            BacklogView(tasks: $tasks).tabItem {
                 Label("Backlog", systemImage: "archivebox.fill")
             }
         }

@@ -8,53 +8,40 @@
 import SwiftUI
 
 struct ActiveItemsView: View {
-//    @State private var items: [Task]
-//
-//    @State private var isPresented = false
+    @Binding var items: [Task]
+    @State private var isPresented = false
 
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Test")
-            }.navigationTitle("Active Items")
-//            List($items) { task in
-//                NavigationLink {
-//                    BacklogDetailView(item: task)
-//                } label: {
-//                    BacklogItemView(title: task.title, image: task.priority)
-//                }
-//
-//            }.navigationTitle("Backlog")
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarLeading) {
-//                    EditButton()
-//                }
-//
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    Button("Add") {
-//                        //TODO: Add new callsheet view to enter the task title and priority
-//                        isPresented.toggle()
-//                    }
-//                }
-//            }.sheet(isPresented: $isPresented) {
-//                NewTaskSheet(items: $items, isPresented: $isPresented, newTask: Task(id: UUID(), title: "", priority: PrioritySymbol.unSelected
-//    ))
-//            }
+                List {
+                    ForEach($items.filter{$0.isActive.wrappedValue}) { item in
+                        NavigationLink {
+                            BacklogDetailView(item: item, tasks: $items)
+                        } label: {
+                            BacklogItemView(title: item.title, image: item.priority)
+                        }
+                    }
+                    
+
+                }.navigationTitle("Active Tasks")
+            }.toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Add") {
+                        //TODO: Add new callsheet view to enter the task title and priority
+                        isPresented.toggle()
+                    }
+                }
+            }.sheet(isPresented: $isPresented) {
+                NewTaskSheet(items: $items, isPresented: $isPresented, isActive: true)
+            }
                 
         }
     }
-    
-//    func getActiveTasks() -> [Task]{
-//        return items.filter({$0.isActive})
-//    }
-    
-//    var activeTasks: [Task] {
-//        switch filter {
-//        case .isActive:
-//            return items.filter({ $0.isActive })
-//        }
-//    }
-
 }
 
 
