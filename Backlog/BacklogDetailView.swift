@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BacklogDetailView: View {
     @Binding var item: Task
-    @State private var comment: String = ""
+    // @State private var comment: String = ""
     @State private var prioritySheetIsPresented = false
     var body: some View {
         NavigationStack {
@@ -35,15 +35,22 @@ struct BacklogDetailView: View {
                     .padding(.leading, 15)
                     .padding(.bottom, 15)
                     .fontWeight(.light)
-                TextField("Enter comment", text: $comment, axis: .vertical)
-                    .multilineTextAlignment(.center)
+                TextField("Enter comment", text: $item.comments, axis: .vertical)
+                    .multilineTextAlignment(.leading)
                     .textFieldStyle(.roundedBorder)
                     .lineLimit(6, reservesSpace: true)
                     .padding()
+                
+               
                
                 
-                Spacer()
+                Spacer(minLength: 15)
             }
+            Button("Move to active items") {
+                print("Move to active..")
+            }.buttonStyle(.borderedProminent).padding()
+            Spacer(minLength: 20)
+            
         }.navigationTitle("Details")
     }
 }

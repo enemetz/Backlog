@@ -12,6 +12,8 @@ struct Task: Identifiable, Hashable {
     var id = UUID()
     var title: String
     var priority: PrioritySymbol
+    var comments: String = ""
+    var isActive: Bool = false
     
 }
 
@@ -19,5 +21,6 @@ enum PrioritySymbol: String {
     case high = "chevron.up"
     case medium = "minus"
     case low = "chevron.down"
+    case unSelected = ""
     
 }

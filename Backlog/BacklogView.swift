@@ -18,7 +18,6 @@ struct BacklogView: View {
     @State private var items = tasks
     @State private var muliSelect = Set<UUID>()
     @State private var isPresented = false
-    @State private var titleString = ""
     var body: some View {
         NavigationStack {
             List($items, selection: $muliSelect) { task in
@@ -41,7 +40,8 @@ struct BacklogView: View {
                     }
                 }
             }.sheet(isPresented: $isPresented) {
-                NewTaskSheet(title: titleString)
+                NewTaskSheet(items: $items, isPresented: $isPresented, newTask: Task(id: UUID(), title: "", priority: PrioritySymbol.unSelected
+    ))
             }
         }
     }
