@@ -77,7 +77,17 @@ struct NewTaskSheet: View {
                     newTask.isActive = isActive
                     items.append(newTask)
                     isPresented.toggle()
-                }.buttonStyle(.bordered).padding()
+                }.buttonStyle(.bordered)
+                    .padding()
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("Close") {
+                                //TODO: Add new callsheet view to enter the task title and priority
+                                isPresented.toggle()
+                            }
+                        }
+                    }
+                
                 Spacer()
 
             }.navigationTitle("New Task")

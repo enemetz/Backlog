@@ -11,6 +11,7 @@ struct BacklogDetailView: View {
     @Binding var item: Task
     @Binding var tasks: [Task]
     @State private var prioritySheetIsPresented = false
+    @State private var envSheetPresented = false
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 8) {
@@ -30,6 +31,16 @@ struct BacklogDetailView: View {
                     }
                 }
                 
+                HStack {
+                    Text("Environment:").fontWeight(.light).padding(.leading, 15)
+                    EnvironmentTag(task: item).onTapGesture {
+                        envSheetPresented.toggle()
+                    }.sheet(isPresented: $envSheetPresented) {
+                        EnvironmentSheet(task: $item, isPresented: $envSheetPresented)
+                            .presentationDetents([.medium, .large])
+                    }
+                }
+                
                 Text("Comments: ")
                     .padding(.leading, 15)
                     .padding(.bottom, 15)
@@ -43,19 +54,19 @@ struct BacklogDetailView: View {
                 Spacer(minLength: 15)
             }
             
-            VStack {
-                Button(!item.isActive ? "Move to active items": "Move to backlog") {
-                    print("toggle")
-                    if(item.isActive) {
-                        item.isActive = false
-                    } else {
-                        item.isActive = true
-                    }
-                    
-                    
-                }.buttonStyle(.borderedProminent).padding()
-                Spacer(minLength: 20)
-            }
+//            VStack {
+//                Button(!item.isActive ? "Move to active items": "Move to backlog") {
+//                    print("toggle")
+//                    if(item.isActive) {
+//                        item.isActive = false
+//                    } else {
+//                        item.isActive = true
+//                    }
+//
+//
+//                }.buttonStyle(.borderedProminent).padding()
+//                Spacer(minLength: 20)
+//            }
            
         }.navigationTitle("Details")
     }
